@@ -13,7 +13,7 @@ body {
   text-align: center;
   padding: 60px 20px; /* make the banner tall and spacious */
   /* Add background image */
-  background-image: linear-gradient(rgba(30,136,168,0.7), rgba(35,198,200,0.5)), url('cta-bg.jpg');
+  background-image: linear-gradient(rgba(30,136,168,0.7), rgba(35,198,200,0.5)), url('hero image.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -53,20 +53,69 @@ body {
   background-color: #1e88a8; /* darker blue on hover */
 }
 
-/* Style for the site header */
+/* Top container to hold header and nav buttons */
+.top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Update site header to remove centering and background */
 .site-header {
-  background-color: #1e88a8; /* match banner color */
-  color: #ffffff;
-  text-align: center;
+  background: none;
+  color: #1e88a8;
+  text-align: left;
   padding: 20px 0;
-  /* Add a subtle border at the bottom */
-  border-bottom: 2px solid #23c6c8;
+  border-bottom: none;
 }
 
 .site-header h2 {
   margin: 0;
   font-size: 2em;
   letter-spacing: 2px;
+}
+
+/* Style for header left section */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Logo styling */
+.logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Navigation buttons styling */
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.header-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.sign-in-btn {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.donate-btn {
+  background-color: #23c6c8;
+  color: white;
+}
+
+.header-button:hover {
+  opacity: 0.8;
 }
 
 /* Info section below the banner */
