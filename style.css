@@ -1,29 +1,120 @@
+/* Use a modern, easy-to-read font */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f4f8fb;
-    color: #222;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #e6f7fa; /* light teal background for the page */
 }
 
-header {
-    background: #2e86c1;
-    color: #fff;
-    padding: 2rem 1rem;
-    text-align: center;
+/* Style the CTA banner */
+.cta-banner {
+  background-color: #1e88a8; /* fallback color */
+  color: #ffffff;
+  text-align: center;
+  padding: 60px 20px; /* make the banner tall and spacious */
+  /* Add background image */
+  background-image: linear-gradient(rgba(30,136,168,0.7), rgba(35,198,200,0.5)), url('img/cta-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-main {
-    padding: 2rem 1rem;
-    text-align: center;
+/* Large main heading */
+.cta-banner h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
 }
 
-footer {
-    background: #d6eaf8;
-    color: #333;
+/* Short description */
+.cta-banner p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+/* Eye-catching button */
+.cta-button {
+  display: inline-block;
+  background-color: #23c6c8; /* bright teal */
+  color: #ffffff;
+  text-decoration: none;
+  padding: 15px 35px;
+  font-size: 1.1em;
+  border-radius: 5px;
+  /* Make the button stand out */
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  /* Add a simple shadow for depth */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Button hover effect */
+.cta-button:hover {
+  background-color: #1e88a8; /* darker blue on hover */
+}
+
+/* Style for the site header */
+.site-header {
+  background-color: #1e88a8; /* match banner color */
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+  /* Add a subtle border at the bottom */
+  border-bottom: 2px solid #23c6c8;
+}
+
+.site-header h2 {
+  margin: 0;
+  font-size: 2em;
+  letter-spacing: 2px;
+}
+
+/* Info section below the banner */
+.info-section {
+  max-width: 700px;
+  margin: 40px auto 0 auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(30,136,168,0.08);
+  /* Use table display for two columns without flexbox/grid */
+  display: table;
+  width: 100%;
+}
+
+/* Image column */
+.info-image {
+  display: table-cell;
+  vertical-align: middle;
+  width: 50%;
+  text-align: center;
+  padding-right: 20px;
+}
+
+/* Text column */
+.info-text {
+  display: table-cell;
+  vertical-align: middle;
+  width: 50%;
+  text-align: left;
+  padding-left: 20px;
+}
+
+/* Responsive: stack columns on small screens */
+@media (max-width: 600px) {
+  .info-section {
+    display: block;
     text-align: center;
-    padding: 1rem;
-    position: fixed;
+  }
+  .info-image,
+  .info-text {
+    display: block;
     width: 100%;
-    bottom: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .info-text {
+    margin-top: 20px;
+    text-align: center;
+  }
 }
