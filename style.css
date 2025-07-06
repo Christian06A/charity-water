@@ -13,7 +13,7 @@ body {
   text-align: center;
   padding: 60px 20px; /* make the banner tall and spacious */
   /* Add background image */
-  background-image: linear-gradient(rgba(30,136,168,0.7), rgba(35,198,200,0.5)), url('img/cta-bg.jpg');
+  background-image: linear-gradient(rgba(30,136,168,0.7), rgba(35,198,200,0.5)), url('cta-bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
