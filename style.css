@@ -1,93 +1,20 @@
-/* Import Proxima Nova from web fonts */
+/* Import the font we want to use */
 @import url('https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@300;400;600;700&display=swap');
 
-/* Use Proxima Nova for all text and make everything bold */
+/* Make everything use our font and bold text */
 * {
-  font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
   font-weight: bold;
 }
 
+/* Basic page setup */
 body {
-  font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  font-weight: bold;
   margin: 0;
   padding: 0;
-  background: #1a1a1a; /* dark charcoal background for the page */
+  background: #1a1a1a;
 }
 
-/* Ensure all headings use Proxima Nova and are bold */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  font-weight: bold;
-}
-
-/* Ensure all paragraphs and text elements use Proxima Nova and are bold */
-p, span, div, a, button, input, textarea, label {
-  font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  font-weight: bold;
-}
-
-/* Style the CTA banner */
-.cta-banner {
-  background-color: #1e88a8; /* fallback color */
-  color: #ffffff;
-  text-align: left; /* Changed from center to left */
-  padding: 60px 20px; /* make the banner tall and spacious */
-  /* Add background image */
-  background-image: linear-gradient(rgba(30,136,168,0.7), rgba(35,198,200,0.5)), url('img/hero image.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative; /* Add relative positioning for absolute child positioning */
-  min-height: 400px; /* Ensure banner has enough height */
-  display: flex;
-  align-items: flex-end; /* Align content to bottom */
-}
-
-/* Large main heading - positioned in bottom left */
-.cta-banner h1 {
-  font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  font-size: 2.5em;
-  margin: 0;
-  text-align: left;
-  position: absolute;
-  bottom: 30px;
-  left: 30px;
-  z-index: 2; /* Ensure text appears above background */
-  color: #ffc907; /* Bright yellow color */
-}
-
-/* Short description */
-.cta-banner p {
-  font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  font-size: 1.2em;
-  margin-bottom: 30px;
-}
-
-/* Eye-catching button */
-.cta-button {
-  font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  display: inline-block;
-  background-color: #23c6c8; /* bright teal */
-  color: #ffffff;
-  text-decoration: none;
-  padding: 15px 35px;
-  font-size: 1.1em;
-  border-radius: 5px;
-  /* Make the button stand out */
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  /* Add a simple shadow for depth */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-/* Button hover effect */
-.cta-button:hover {
-  background-color: #1e88a8; /* darker blue on hover */
-}
-
-/* Top container to hold header and nav buttons */
+/* Header section */
 .top-container {
   display: flex;
   justify-content: space-between;
@@ -95,49 +22,40 @@ p, span, div, a, button, input, textarea, label {
   padding: 0 20px;
 }
 
-/* Update site header to remove centering and background */
 .site-header {
-  background: none;
   color: #1e88a8;
-  text-align: left;
   padding: 20px 0;
-  border-bottom: none;
 }
 
 .site-header h2 {
-  font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   margin: 0;
-  font-size: 2em;
+  font-size: 28px;
   letter-spacing: 2px;
 }
 
-/* Style for header left section */
 .header-left {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-/* Logo styling */
 .logo {
-  width: 50px;
+  width: 50x;
   height: 50px;
-  object-fit: contain;
 }
 
-/* Navigation buttons styling */
+/* Navigation buttons */
 .nav-buttons {
   display: flex;
   gap: 10px;
 }
 
 .header-button {
-  font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  font-weight: bold;
   cursor: pointer;
+  font-size: 20px;
 }
 
 .sign-in-btn {
@@ -154,38 +72,48 @@ p, span, div, a, button, input, textarea, label {
   opacity: 0.8;
 }
 
-/* Info section container - side by side layout */
+/* Hero banner */
+.cta-banner {
+  background: url('img/hero image.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 60px 20px;
+  min-height: 400px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.cta-banner h1 {
+  font-size: 60px;
+  margin: 0;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  color: #ffc907;
+}
+
+/* Info section with image and text side by side */
 .info-section {
   max-width: 900px;
-  margin: 40px auto 0 auto;
+  margin: 40px auto;
   padding: 20px;
-  /* Remove shared background */
-  background: none;
-  border-radius: 0;
-  box-shadow: none;
-  /* Use flexbox for side by side layout */
   display: flex;
   align-items: center;
   gap: 40px;
-  width: 100%;
-  position: relative;
 }
 
-/* Image container with its own background and shadow */
 .info-image {
-  display: block;
   width: 300px;
   height: 300px;
-  margin: 0;
   background: #f8f9fa;
   border-radius: 12px;
   padding: 15px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  position: relative;
-  flex-shrink: 0; /* Prevent image from shrinking */
+  flex-shrink: 0;
 }
 
-/* Image styling within the container */
 .info-image img {
   width: 100%;
   height: 100%;
@@ -201,6 +129,73 @@ p, span, div, a, button, input, textarea, label {
   padding: 25px;
   background: #ffffff;
   border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(30,136,168,0.1);
+  margin: 0;
+}
+
+/* Changemaker section styling */
+.changemaker-section {
+  padding: 60px 20px;
+  background: #1a1a1a;
+  color: white;
+}
+
+.changemaker-section h2 {
+  font-size: 40px;
+  margin: 0 0 20px 0;
+  color: #ffc907;
+}
+
+.changemaker-section p {
+  font-size: 100px;
+  margin: 0;
+}
+
+/* Make it work on phones */
+@media (max-width: 800px) {
+  .info-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+    gap: 20px;
+  }
+  
+  .info-image {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+  }
+  
+  .info-text {
+    padding: 20px 15px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+    gap: 20px;
+  }
+  
+  .info-image {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+  }
+  
+  .info-text {
+    padding: 20px 15px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+  .info-text {
+    padding: 20px 15px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
   box-shadow: 0 4px 12px rgba(30,136,168,0.1);
   margin: 0;
 }
