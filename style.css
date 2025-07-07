@@ -27,6 +27,16 @@ body {
   padding: 20px 0;
 }
 
+.site-header a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.site-header a:hover {
+  color: #ffc907;
+}
+
 .site-header h2 {
   margin: 0;
   font-size: 28px;
@@ -59,6 +69,8 @@ body {
   font-size: 20px;
   transition: all 0.3s ease;
   transform: translateY(0);
+  text-decoration: none;
+  display: inline-block;
 }
 
 .sign-in-btn {
