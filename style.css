@@ -23,7 +23,7 @@ body {
 }
 
 .site-header {
-  color: #1e88a8;
+  color: white;
   padding: 20px 0;
 }
 
@@ -31,6 +31,7 @@ body {
   margin: 0;
   font-size: 28px;
   letter-spacing: 2px;
+  font-weight: normal;
 }
 
 .header-left {
@@ -78,15 +79,15 @@ body {
   background-size: cover;
   background-position: center;
   color: white;
-  padding: 60px 20px;
-  min-height: 400px;
+  padding: 100px 20px;
+  min-height: 600px;
   position: relative;
   display: flex;
   align-items: flex-end;
 }
 
 .cta-banner h1 {
-  font-size: 60px;
+  font-size: 80px;
   margin: 0;
   position: absolute;
   bottom: 30px;
@@ -102,6 +103,21 @@ body {
   display: flex;
   align-items: center;
   gap: 40px;
+}
+
+.info-section.left {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.info-section.right {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.info-section.center {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .info-image {
@@ -124,9 +140,10 @@ body {
 .info-text {
   flex: 1;
   padding: 25px;
-  background: white;
+  background: #1a1a1a;
+  color: white;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(30,136,168,0.1);
+  box-shadow: 0 4px 12px rgba(30,136,168,0.1), 0 0 20px rgba(255, 201, 7, 0.3);
 }
 
 /* Changemaker section */
