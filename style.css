@@ -12,7 +12,7 @@ body {
   font-weight: bold;
   margin: 0;
   padding: 0;
-  background: #e6f7fa; /* light teal background for the page */
+  background: #1a1a1a; /* dark charcoal background for the page */
 }
 
 /* Ensure all headings use Proxima Nova and are bold */
@@ -146,25 +146,27 @@ p, span, div, a, button, input, textarea, label {
 }
 
 .donate-btn {
-  background-color: #23c6c8;
-  color: white;
+  background-color: #77a8bb;
+  color: #003366;
 }
 
 .header-button:hover {
   opacity: 0.8;
 }
 
-/* Info section container - no background, just spacing */
+/* Info section container - side by side layout */
 .info-section {
-  max-width: 700px;
+  max-width: 900px;
   margin: 40px auto 0 auto;
   padding: 20px;
   /* Remove shared background */
   background: none;
   border-radius: 0;
   box-shadow: none;
-  /* Change to block layout instead of table */
-  display: block;
+  /* Use flexbox for side by side layout */
+  display: flex;
+  align-items: center;
+  gap: 40px;
   width: 100%;
   position: relative;
 }
@@ -174,12 +176,13 @@ p, span, div, a, button, input, textarea, label {
   display: block;
   width: 300px;
   height: 300px;
-  margin: 0 auto 30px auto;
+  margin: 0;
   background: #f8f9fa;
   border-radius: 12px;
   padding: 15px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   position: relative;
+  flex-shrink: 0; /* Prevent image from shrinking */
 }
 
 /* Image styling within the container */
@@ -193,33 +196,59 @@ p, span, div, a, button, input, textarea, label {
 /* Text section styling with its own background */
 .info-text {
   display: block;
-  width: 100%;
-  text-align: center;
+  flex: 1; /* Take up remaining space */
+  text-align: left;
   padding: 25px;
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(30,136,168,0.1);
-  margin: 0 auto;
-  max-width: 500px;
+  margin: 0;
 }
 
-/* Responsive: maintain centered layout on small screens */
-@media (max-width: 600px) {
+/* Changemaker section styling */
+.changemaker-section {
+  text-align: left;
+  padding: 60px 20px;
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+.changemaker-section h2 {
+  font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 2.2em;
+  margin: 0 0 20px 0;
+  font-weight: bold;
+  color: #ffc907; /* Same yellow as the hero text */
+  text-align: left;
+}
+
+.changemaker-section p {
+  font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 1.3em;
+  margin: 0;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: left;
+}
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 800px) {
   .info-section {
-    display: block;
+    flex-direction: column;
     text-align: center;
     padding: 15px;
+    gap: 20px;
   }
   .info-image {
     width: 250px;
     height: 250px;
-    margin: 0 auto 20px auto;
+    margin: 0 auto;
   }
   .info-text {
-    display: block;
     width: 100%;
     padding: 20px 15px;
     text-align: center;
     max-width: 90%;
+    margin: 0 auto;
   }
 }
