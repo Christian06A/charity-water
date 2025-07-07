@@ -31,10 +31,18 @@ body {
   text-decoration: none;
   color: inherit;
   transition: color 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .site-header a:hover {
   color: #ffc907;
+}
+
+.site-header a:visited,
+.site-header a:active,
+.site-header a:focus {
+  color: inherit;
+  text-decoration: none;
 }
 
 .site-header h2 {
@@ -71,6 +79,14 @@ body {
   transform: translateY(0);
   text-decoration: none;
   display: inline-block;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.header-button:visited,
+.header-button:active,
+.header-button:focus {
+  text-decoration: none;
+  color: inherit;
 }
 
 .sign-in-btn {
@@ -87,6 +103,7 @@ body {
   opacity: 0.8;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  text-decoration: none;
 }
 
 /* Hero banner */
